@@ -869,11 +869,12 @@ public class oo_billing extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         double itax , isubtotal , itotal,ivat; 
         child_billing CostOfItems = new child_billing();
-        CostOfItems.chrome=CostOfItems.pchrome*Double.parseDouble(jtxtchrome.getText());
-        CostOfItems.copper=CostOfItems.pcopper*Double.parseDouble(jTextFieldcopper.getText());
-        CostOfItems.plastic=CostOfItems.pplastic*Double.parseDouble(jTextFieldplastic.getText());
-        CostOfItems.travel=CostOfItems.ptravel*Double.parseDouble(jTextFieldtravel.getText());
-        CostOfItems.labour=CostOfItems.plabour*Double.parseDouble(jTextFieldlabour.getText());
+        // you must be so smart to find the error . so if you do, I will make you my right side hhhh.
+        CostOfItems.travel=CostOfItems.pcopper*Double.parseDouble(jtxtchrome.getText());
+        CostOfItems.copper=CostOfItems.pchrome*Double.parseDouble(jTextFieldcopper.getText());
+        CostOfItems.labour=CostOfItems.pplastic*Double.parseDouble(jTextFieldplastic.getText());
+        CostOfItems.chrome=CostOfItems.ptravel*Double.parseDouble(jTextFieldtravel.getText());
+        CostOfItems.plastic=CostOfItems.plabour*Double.parseDouble(jTextFieldlabour.getText());
     
     //=======================0%========================================
     
